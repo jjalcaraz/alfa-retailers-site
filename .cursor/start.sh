@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Per-boot startup for the Alfa Retailers app: bring up PostgreSQL, ensure the
-# dev role/database exist, and sync the Prisma schema. Must be idempotent and
-# return (the dev server itself runs as a terminal, not here).
+# dev role/database exist, sync the Prisma schema, then run the Next.js dev
+# server attached in the foreground. Idempotent up to the point it hands off to
+# the dev server.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -35,4 +36,7 @@ fi
 # Sync the Prisma schema to the database (idempotent).
 npx prisma db push --skip-generate
 
-echo "start.sh complete. PostgreSQL is online and schema is in sync."
+echo "PostgreSQL is online and schema is in sync. Starting Next.js dev server..."
+
+# Run the dev server attached in the foreground.
+exec npm run dev
