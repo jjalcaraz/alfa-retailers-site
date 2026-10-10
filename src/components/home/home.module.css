@@ -1,0 +1,71 @@
+/* Home page scoped styles: fonts, focus ring, hero glow, scroll reveal. */
+
+.root {
+  background: #0a0f1c;
+  color: #e6ebf5;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mono {
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+/* Visible keyboard focus everywhere on the page. */
+.root :focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 3px;
+}
+
+.glow {
+  animation: ar-glow 14s ease-in-out infinite alternate;
+}
+
+@keyframes ar-glow {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(-6%, 4%) scale(1.12);
+    opacity: 0.85;
+  }
+}
+
+/*
+ * Scroll reveal. Content is fully visible by default (no JS needed).
+ * RevealObserver only adds data-reveal-state="hidden" client-side, to
+ * elements that start below the fold, and removes it when they scroll in.
+ */
+.root [data-reveal] {
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+
+.root [data-reveal][data-reveal-state='hidden'] {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root,
+  .root *,
+  .root *::before,
+  .root *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .root [data-reveal][data-reveal-state='hidden'] {
+    opacity: 1;
+    transform: none;
+  }
+}
