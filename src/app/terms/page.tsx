@@ -1,25 +1,32 @@
-'use client'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service | Alfa Retailers LLC',
+  description: 'Terms of Service for Alfa Retailers LLC and its automation services.',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://www.alfaretailers.com/terms' },
+}
 
 const sections = [
   {
     title: 'Services & Scope',
-    body: `We provide short-term rental management, including listing creation, pricing, guest communication, cleaning coordination, and maintenance coordination. We do not provide legal, tax, or insurance advice. Owners remain responsible for complying with local regulations and ensuring the property is safe, habitable, and insured.`,
+    body: `Alfa Retailers LLC builds and operates automation systems for local service businesses, including our missed-call text-back service, Get Always Answered, and custom automation projects. The specific scope, deliverables, and timeline for any project are defined in the applicable service agreement.`,
   },
   {
-    title: 'Fees & Payouts',
-    body: `Management fees are percentage-based on rental revenue as set in your service agreement. Cleaning and turnover expenses are pass-through at vendor rates. Payouts are sent monthly with reporting on revenue, fees, and pass-through costs. Any taxes, permitting, or compliance costs are the owner’s responsibility.`,
+    title: 'Fees & Engagements',
+    body: `Fees and payment terms for custom projects are as set out in the applicable service agreement. Any third-party service costs required for your project (e.g., texting, hosting, or software subscriptions) are handled as described in that agreement.`,
   },
   {
-    title: 'Owner Obligations',
-    body: `You must provide accurate property details, maintain utilities, and keep required permits and insurance current. You agree to notify us of any issues that could impact guest safety or bookings. You authorize us to act on your behalf within the agreed service scope to manage listings, pricing, guest communication, and vendor coordination.`,
+    title: 'Client Responsibilities',
+    body: `You agree to provide accurate information, timely feedback, and any account access reasonably required to deliver the agreed scope. You are responsible for how you use the systems we build, including compliance with laws and platform rules that apply to your business.`,
   },
   {
-    title: 'Guest Issues & Damages',
-    body: `We manage guest communications and reasonable resolutions. When damages occur, we will pursue collection from guests via platform claims processes where applicable. Owners are responsible for repairs and insurance claims beyond what is recovered from guests.`,
+    title: 'Third-Party Services',
+    body: `Our services may rely on third-party providers (e.g., telephony, email, hosting, analytics). Those providers’ terms and privacy policies apply to their services, and we are not responsible for their availability or actions.`,
   },
   {
-    title: 'Cancellations & Changes',
-    body: `Either party may terminate with 30 days notice unless otherwise stated in your agreement. Owner-reserved dates should be provided in advance; pricing and availability will adjust around them. We reserve the right to pause or cancel bookings if safety, compliance, or payment issues arise.`,
+    title: 'Term & Termination',
+    body: `Either party may terminate an engagement with 30 days written notice unless your service agreement states otherwise. Upon termination, we will hand over work product and access as described in that agreement.`,
   },
   {
     title: 'Liability',
@@ -27,7 +34,7 @@ const sections = [
   },
   {
     title: 'Privacy & Data',
-    body: `We handle personal data in accordance with our Privacy Policy. You agree not to share guest data beyond what is necessary for service delivery and to comply with applicable privacy laws.`,
+    body: `We handle personal data in accordance with our Privacy Policy. You agree to use any systems we provide lawfully and not to send unsolicited messages through them.`,
   },
   {
     title: 'Governing Law',
@@ -48,7 +55,7 @@ export default function TermsPage() {
             <p className="text-sm uppercase tracking-[0.25em] text-amber-500 mb-2">Terms of Service</p>
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Service Terms & Conditions</h1>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Simple, transparent terms for partnering with Alfa Retailers. These apply alongside any signed service agreement.
+              Terms for using our website and services. These apply alongside any signed service agreement.
             </p>
           </section>
 
@@ -62,7 +69,7 @@ export default function TermsPage() {
           </div>
 
           <div className="mt-12 text-sm text-slate-500 text-center">
-            Last updated: {new Date().toLocaleDateString()}. For questions, contact us at info@alfaretailers.com or 210-526-1401.
+            Last updated: {new Date().toLocaleDateString()}. For questions, contact us at juanalcaraz@alfaretailers.com or (210) 526-1401.
           </div>
         </div>
       </main>

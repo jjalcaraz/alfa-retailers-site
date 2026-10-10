@@ -1,4 +1,11 @@
-'use client'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Cookie Policy | Alfa Retailers LLC',
+  description: 'How Alfa Retailers LLC uses cookies and how you can manage them.',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://www.alfaretailers.com/cookies' },
+}
 
 const sections = [
   {
@@ -46,7 +53,7 @@ export default function CookiesPage() {
           </div>
 
           <div className="mt-12 text-sm text-slate-500 text-center">
-            Last updated: {new Date().toLocaleDateString()}. For questions, contact us at info@alfaretailers.com or 210-526-1401.
+            Last updated: {new Date().toLocaleDateString()}. For questions, contact us at juanalcaraz@alfaretailers.com or (210) 526-1401.
           </div>
         </div>
       </main>

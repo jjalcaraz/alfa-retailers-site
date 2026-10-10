@@ -10,12 +10,9 @@ export const metadata: Metadata = {
     default: 'Alfa Retailers LLC',
     template: '%s | Alfa Retailers LLC',
   },
-  description: 'Alfa Retailers LLC — property services company in San Antonio, Texas.',
+  description: 'AI automation and revenue operations for local service businesses.',
   authors: [{ name: 'Alfa Retailers LLC' }],
   metadataBase: new URL(PRODUCTION_URL),
-  alternates: {
-    canonical: PRODUCTION_URL,
-  },
   formatDetection: {
     email: false,
     address: false,
@@ -37,20 +34,27 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-white text-gray-900 flex min-h-screen flex-col">
         {children}
         <footer className="mt-auto border-t border-gray-100 py-8">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-            <p>© {new Date().getFullYear()} Alfa Retailers LLC. All rights reserved.</p>
-            <nav className="flex gap-6" aria-label="Legal">
-              <Link href="/privacy-policy" className="hover:text-gray-900">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-gray-900">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="hover:text-gray-900">
-                Cookies
-              </Link>
-            </nav>
-          </div>
+          <p className="mx-auto max-w-5xl px-4 text-center text-sm leading-6 text-gray-500 sm:px-6">
+            Alfa Retailers LLC · 12506 Ponder Ranch, San Antonio, TX 78245 ·{' '}
+            <a
+              href="mailto:juanalcaraz@alfaretailers.com"
+              className="underline hover:text-gray-900"
+            >
+              juanalcaraz@alfaretailers.com
+            </a>{' '}
+            ·{' '}
+            <a href="tel:+12105261401" className="underline hover:text-gray-900">
+              (210) 526-1401
+            </a>{' '}
+            ·{' '}
+            <Link href="/privacy-policy" className="underline hover:text-gray-900">
+              Privacy Policy
+            </Link>{' '}
+            ·{' '}
+            <Link href="/terms" className="underline hover:text-gray-900">
+              Terms
+            </Link>
+          </p>
         </footer>
       </body>
     </html>

@@ -23,10 +23,10 @@ export default function PrivacyPolicy() {
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-center mb-6">Privacy Policy</h1>
             <p className="text-xl text-center text-slate-300 max-w-3xl mx-auto">
-              Your privacy matters to us. This policy explains how Alfa Retailers collects, uses, and protects your personal information.
+              Your privacy matters to us. This policy explains how Alfa Retailers LLC collects, uses, and protects your personal information.
             </p>
             <div className="text-center mt-8 text-sm text-slate-400">
-              Last updated: June 20, 2026
+              Last updated: October 10, 2026
             </div>
           </div>
         </section>
@@ -39,9 +39,10 @@ export default function PrivacyPolicy() {
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Welcome to Alfa Retailers (<strong>https://www.alfaretailers.com/</strong>). We are committed to protecting your personal information
-                and your right to privacy. This Privacy Policy describes what information we collect, why we collect it,
-                how we use it, and your choices.
+                Welcome to Alfa Retailers LLC (<strong>https://www.alfaretailers.com/</strong>). We provide AI automation
+                and revenue operations services for local service businesses. Through this website you can learn about
+                our services and contact us by email or phone. This Privacy Policy describes what information we collect,
+                why we collect it, how we use it, and your choices.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mt-4">
                 By using our website or services you agree to the collection and use of information as described here.
@@ -59,9 +60,7 @@ export default function PrivacyPolicy() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Information you provide directly</h3>
                   <ul className="text-gray-600 space-y-2">
                     <li>• Name, email address, phone number</li>
-                    <li>• Property details and address</li>
                     <li>• Messages and inquiries submitted via our website or by email</li>
-                    <li>• Financial information for payment processing</li>
                   </ul>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
@@ -86,7 +85,7 @@ export default function PrivacyPolicy() {
                 <div className="bg-brand-blue/5 border border-brand-blue/20 rounded-lg p-6">
                   <h3 className="font-semibold text-brand-blue mb-3">Service Delivery</h3>
                   <p className="text-gray-600">
-                    To provide property management services, handle bookings, manage guest communications, and optimize rental performance.
+                    To operate this website, deliver the services described in your service agreement, and respond to your inquiries.
                   </p>
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6">
@@ -132,7 +131,7 @@ export default function PrivacyPolicy() {
               <div className="space-y-4">
                 <div className="border-l-4 border-brand-blue pl-6 py-3">
                   <h4 className="font-semibold text-gray-900 mb-2">Service Providers</h4>
-                  <p className="text-gray-600">With trusted third-party providers who help us operate our business (e.g., payment processors, booking platforms, email delivery). These providers are contractually prohibited from using your data for any other purpose.</p>
+                  <p className="text-gray-600">With trusted third-party providers who help us operate our business (e.g., website hosting, analytics, email delivery). These providers are contractually prohibited from using your data for any other purpose.</p>
                 </div>
                 <div className="border-l-4 border-green-400 pl-6 py-3">
                   <h4 className="font-semibold text-gray-900 mb-2">With Your Consent</h4>
@@ -205,7 +204,7 @@ export default function PrivacyPolicy() {
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-blue-400 text-blue-100 text-sm">
-                  Alfa Retailers · 12370 Potranco Rd, Suite 207 · San Antonio, TX 78254<br />
+                  Alfa Retailers LLC · 12506 Ponder Ranch · San Antonio, TX 78245<br />
                   We will respond to your inquiry within 30 days of receipt.
                 </div>
               </div>
