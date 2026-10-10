@@ -2,7 +2,7 @@
 const PRODUCTION_URL = 'https://www.alfaretailers.com'
 
 // Get the absolute URL for the site
-export function getAbsoluteUrl(path: string = ''): string {
+function getAbsoluteUrl(path = '') {
   // Always use production URL to prevent Vercel deployment URLs in canonical tags
   let baseUrl = PRODUCTION_URL
 
@@ -21,7 +21,7 @@ export function getAbsoluteUrl(path: string = ''): string {
 }
 
 // Get the canonical URL with proper normalization
-export function getCanonicalUrl(path: string = ''): string {
+function getCanonicalUrl(path = '') {
   const url = getAbsoluteUrl(path)
 
   // Remove trailing slash for consistency (except for homepage)
@@ -36,3 +36,6 @@ export function getCanonicalUrl(path: string = ''): string {
 
   return url
 }
+
+exports.getAbsoluteUrl = getAbsoluteUrl
+exports.getCanonicalUrl = getCanonicalUrl

@@ -1,6 +1,8 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { getAbsoluteUrl, getCanonicalUrl } from '../src/lib/seo-utils.ts'
+import seoUtils from '../src/lib/seo-utils.js'
+
+const { getAbsoluteUrl, getCanonicalUrl } = seoUtils
 
 const WWW = 'https://www.alfaretailers.com'
 
