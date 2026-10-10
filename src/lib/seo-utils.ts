@@ -6,9 +6,12 @@ export function getAbsoluteUrl(path: string = ''): string {
   // Always use production URL to prevent Vercel deployment URLs in canonical tags
   let baseUrl = PRODUCTION_URL
 
-  // Only use environment variable if it's explicitly set to our production domain
-  if (process.env.NEXT_PUBLIC_SITE_URL && process.env.NEXT_PUBLIC_SITE_URL.includes('alfaretailers.com')) {
-    baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+  // Only use the environment variable when it is explicitly our www production
+  // host — an apex value (https://alfaretailers.com) would otherwise override
+  // the www default and emit redirecting URLs into canonicals and the sitemap.
+  const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, '')
+  if (envUrl && (envUrl === PRODUCTION_URL || envUrl.startsWith(`${PRODUCTION_URL}/`))) {
+    baseUrl = envUrl
   }
 
   // Normalize path to avoid double slashes
