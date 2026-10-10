@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 
+// TODO(lawyer): draft pending legal review before launch.
 export const metadata: Metadata = {
   title: 'Terms of Service | Alfa Retailers LLC',
   description: 'Terms of Service for Alfa Retailers LLC and its automation services.',
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.alfaretailers.com/terms' },
 }
 
+// TODO(lawyer): draft pending legal review before launch.
 const sections = [
   {
     title: 'Services & Scope',
@@ -69,7 +71,7 @@ export default function TermsPage() {
           </div>
 
           <div className="mt-12 text-sm text-slate-500 text-center">
-            Last updated: {new Date().toLocaleDateString()}. For questions, contact us at juanalcaraz@alfaretailers.com or (210) 526-1401.
+            Last updated: October 10, 2026. For questions, contact us at juanalcaraz@alfaretailers.com or (210) 526-1401.
           </div>
         </div>
       </main>

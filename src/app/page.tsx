@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Alfa Retailers LLC',
   description: 'AI automation and revenue operations for local service businesses.',
   alternates: {
-    canonical: 'https://www.alfaretailers.com',
+    canonical: 'https://www.alfaretailers.com/',
   },
 }
 
@@ -61,6 +61,26 @@ export default function HomePage() {
             </a>
           </div>
         </div>
+      </section>
+
+      {/* Contact */}
+      <section className="px-6 py-16 text-center">
+        <p className="text-base leading-relaxed text-gray-600">
+          Alfa Retailers LLC · 12506 Ponder Ranch, San Antonio, TX 78245 ·{' '}
+          <a
+            href="mailto:juanalcaraz@alfaretailers.com"
+            className="font-medium text-brand-blue underline hover:text-brand-blue/80"
+          >
+            juanalcaraz@alfaretailers.com
+          </a>{' '}
+          ·{' '}
+          <a
+            href="tel:+12105261401"
+            className="font-medium text-brand-blue underline hover:text-brand-blue/80"
+          >
+            (210) 526-1401
+          </a>
+        </p>
       </section>
     </main>
   )
