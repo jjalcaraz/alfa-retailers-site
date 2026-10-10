@@ -1,5 +1,5 @@
 // Force production URL to prevent Vercel deployment URLs
-const PRODUCTION_URL = 'https://alfaretailers.com'
+const PRODUCTION_URL = 'https://www.alfaretailers.com'
 
 // Get the absolute URL for the site
 export function getAbsoluteUrl(path: string = ''): string {
