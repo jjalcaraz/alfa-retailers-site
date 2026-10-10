@@ -1,106 +1,29 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import './globals.css'
-import { Header } from '@/components/layout/header'
-import { Footer } from '@/components/layout/footer'
-import { EnhancedStructuredData } from '@/components/seo/enhanced-structured-data'
-import { GoogleAnalytics } from '@/components/analytics/google-analytics'
 
-// Force production URL to prevent Vercel deployment URLs in canonical tags
-const PRODUCTION_URL = 'https://alfaretailers.com'
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || PRODUCTION_URL
+// Canonical production URL for metadata
+const PRODUCTION_URL = 'https://www.alfaretailers.com'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Alfa Retailers - Transform Your Empty Rental into a Profit Machine | 42% More Income',
-    template: '%s | Alfa Retailers'
+    default: 'Alfa Retailers LLC',
+    template: '%s | Alfa Retailers LLC',
   },
-  description: 'Stop losing $3,200+ monthly on vacant properties. Convert your stagnant long-term rental into a profitable short-term rental. Average clients see 42% higher income. Free analysis in 5 minutes.',
-  keywords: [
-    'property management',
-    'short-term rental',
-    'Airbnb management',
-    'vacation rental',
-    'property investment',
-    'rental income optimization',
-    'vacant property management',
-    'Airbnb co-hosting',
-    'short-term rental management',
-    'increase rental income',
-    'vacant property solutions',
-    'San Antonio property management',
-    'Texas short-term rentals',
-    'Airbnb property management San Antonio',
-    'vacation rental management Texas',
-    'property management services',
-    'Rental property income maximization',
-    'short-term rental returns',
-    'property management company San Antonio'
-  ],
-  authors: [{ name: 'Alfa Retailers' }],
-  creator: 'Alfa Retailers',
-  publisher: 'Alfa Retailers',
+  description: 'Alfa Retailers LLC — property services company in San Antonio, Texas.',
+  authors: [{ name: 'Alfa Retailers LLC' }],
+  metadataBase: new URL(PRODUCTION_URL),
+  alternates: {
+    canonical: PRODUCTION_URL,
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(PRODUCTION_URL),
-  alternates: {
-    canonical: PRODUCTION_URL,
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: PRODUCTION_URL,
-    title: 'Alfa Retailers - Transform Your Empty Rental into a Profit Machine | 42% More Income',
-    description: 'Stop losing $3,200+ monthly on vacant properties. Average clients see 42% higher income with our proven short-term rental management system.',
-    siteName: 'Alfa Retailers',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Alfa Retailers - Property Management Services',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Alfa Retailers - Transform Your Empty Rental into a Profit Machine',
-    description: 'Stop losing $3,200+ monthly on vacant properties. Average clients see 42% higher income. Free analysis in 5 minutes.',
-    images: ['/twitter-image.jpg'],
-    creator: '@Alfa Retailers',
-  },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: process.env.GOOGLE_SEARCH_CONSOLE_VERIFICATION || '',
-  },
-  // Additional SEO meta tags
-  other: {
-    'theme-color': '#2563eb',
-    'msapplication-TileColor': '#2563eb',
-    'apple-mobile-web-app-capable': 'yes',
-    'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'Alfa Retailers',
-    'application-name': 'Alfa Retailers',
-    'msapplication-config': '/browserconfig.xml',
-    'mobile-web-app-capable': 'yes',
-  },
-  // Viewport and additional meta
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
   },
 }
 
@@ -111,14 +34,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <EnhancedStructuredData />
-      </head>
-      <body className="font-sans">
-        <GoogleAnalytics />
-        <Header />
+      <body className="font-sans antialiased bg-white text-gray-900 flex min-h-screen flex-col">
         {children}
-        <Footer />
+        <footer className="mt-auto border-t border-gray-100 py-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <p>© {new Date().getFullYear()} Alfa Retailers LLC. All rights reserved.</p>
+            <nav className="flex gap-6" aria-label="Legal">
+              <Link href="/privacy-policy" className="hover:text-gray-900">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-gray-900">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="hover:text-gray-900">
+                Cookies
+              </Link>
+            </nav>
+          </div>
+        </footer>
       </body>
     </html>
   )

@@ -1,6 +1,6 @@
 # AlfaRetailers Deployment Validation Report
 **Date:** December 5, 2025
-**Deployed URL:** https://alfaretailers.vercel.app
+**Deployed URL:** https://www.alfaretailers.com
 
 ## Executive Summary
 

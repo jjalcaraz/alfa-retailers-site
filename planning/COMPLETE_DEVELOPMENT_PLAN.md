@@ -505,7 +505,7 @@ Inspired by professional property management with a modern, trustworthy feel:
 
 ### Repository Structure
 ```
-alfaretailers/
+alfa-retailers-site/
 ├── src/
 │   ├── app/                    # Next.js app router
 │   │   ├── (auth)/            # Auth routes
@@ -620,8 +620,8 @@ NEXTAUTH_URL="http://localhost:3000"
 
 1. **Local Setup**
    ```bash
-   npx create-next-app@latest alfaretailers --typescript --tailwind --app
-   cd alfaretailers
+   npx create-next-app@latest alfa-retailers-site --typescript --tailwind --app
+   cd alfa-retailers-site
    npm install @supabase/supabase-js prisma @prisma/client
    npm install @hookform/resolvers react-hook-form zod
    npm install @radix-ui/react-* lucide-react framer-motion

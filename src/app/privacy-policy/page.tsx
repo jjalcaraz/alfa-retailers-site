@@ -1,11 +1,10 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
-import { Shield, Eye, Lock, Mail, Phone, FileText, MessageSquare } from 'lucide-react'
+import { Shield, Eye, Lock, Mail, Phone, FileText } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Alfa Retailers',
   description:
-    'Alfa Retailers Privacy Policy — learn how we collect, use, and protect your personal information, including how we handle SMS consent data.',
+    'Alfa Retailers Privacy Policy — learn how we collect, use, and protect your personal information.',
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://www.alfaretailers.com/privacy-policy' },
 }
@@ -49,37 +48,6 @@ export default function PrivacyPolicy() {
               </p>
             </div>
 
-            {/* SMS / Mobile — the critical A2P compliance section */}
-            <div className="mb-12 rounded-2xl border-2 border-brand-blue/30 bg-blue-50 p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                <MessageSquare className="h-8 w-8 text-brand-blue flex-shrink-0" />
-                Mobile Information and SMS Consent
-              </h2>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
-                Information shared with subcontractors in support services, such as customer service, is permitted.
-                All other use case categories exclude text messaging originator opt-in data and consent; this information
-                will not be shared with any third parties. The phone numbers and consent collected for SMS messaging are
-                used solely by Alfa Retailers to deliver the messages you have opted in to receive.
-              </p>
-              <p className="text-gray-700 leading-relaxed text-lg mt-4">
-                SMS consent is collected via a standalone, unchecked checkbox on our contact form at{' '}
-                <Link href="/contact" className="text-brand-blue underline hover:text-brand-blue/80">
-                  https://www.alfaretailers.com/contact
-                </Link>
-                . Consent is never a condition of purchase and is never bundled with general Terms of Service acceptance.
-              </p>
-              <p className="text-gray-700 leading-relaxed text-lg mt-4">
-                You may opt out of SMS messages at any time by replying <strong>STOP</strong> to any message we send.
-                After opting out you will receive a single confirmation message and no further messages will be sent.
-                Reply <strong>HELP</strong> for assistance or contact{' '}
-                <a href="mailto:juanalcaraz@alfaretailers.com" className="text-brand-blue underline hover:text-brand-blue/80">
-                  juanalcaraz@alfaretailers.com
-                </a>
-                .
-              </p>
-            </div>
-
             {/* Information We Collect */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
@@ -92,8 +60,7 @@ export default function PrivacyPolicy() {
                   <ul className="text-gray-600 space-y-2">
                     <li>• Name, email address, phone number</li>
                     <li>• Property details and address</li>
-                    <li>• Messages and inquiries submitted via our contact form</li>
-                    <li>• SMS consent records (phone number, timestamp, IP address, page URL, and exact consent language)</li>
+                    <li>• Messages and inquiries submitted via our website or by email</li>
                     <li>• Financial information for payment processing</li>
                   </ul>
                 </div>
@@ -125,8 +92,7 @@ export default function PrivacyPolicy() {
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                   <h3 className="font-semibold text-green-700 mb-3">Communication</h3>
                   <p className="text-gray-600">
-                    To respond to inquiries and — when you have opted in — to send SMS messages including consultation booking links,
-                    appointment confirmations, missed-call follow-ups, and customer support updates.
+                    To respond to your inquiries and provide customer support.
                   </p>
                 </div>
                 <div className="bg-brand-orange/5 border border-brand-orange/20 rounded-lg p-6">
@@ -149,7 +115,6 @@ export default function PrivacyPolicy() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Retention</h2>
               <p className="text-gray-600 leading-relaxed text-lg">
                 We retain personal data only for as long as necessary to fulfill the purposes described in this policy or as required by law.
-                SMS consent logs are retained for a minimum of five (5) years to satisfy carrier and regulatory record-keeping requirements.
                 You may request deletion of your personal information at any time by contacting us at{' '}
                 <a href="mailto:juanalcaraz@alfaretailers.com" className="text-brand-blue underline hover:text-brand-blue/80">
                   juanalcaraz@alfaretailers.com
@@ -209,7 +174,6 @@ export default function PrivacyPolicy() {
                   <li>• <strong>Access</strong> — request a copy of the personal information we hold about you.</li>
                   <li>• <strong>Correction</strong> — request that we correct inaccurate information.</li>
                   <li>• <strong>Deletion</strong> — request that we delete your personal information (subject to legal retention obligations).</li>
-                  <li>• <strong>Opt-out of SMS</strong> — reply STOP to any text message or email us at juanalcaraz@alfaretailers.com.</li>
                   <li>• <strong>Portability</strong> — request a machine-readable export of your data.</li>
                 </ul>
               </div>
@@ -253,13 +217,6 @@ export default function PrivacyPolicy() {
               <p className="text-gray-600 leading-relaxed">
                 We may update this Privacy Policy from time to time. We will post the revised policy on this page and update the "Last updated" date.
                 Material changes will be communicated through reasonable means. Continued use of our services after changes take effect constitutes acceptance.
-              </p>
-              <p className="mt-6 text-gray-500 text-sm">
-                For our SMS-specific terms, see our{' '}
-                <Link href="/sms-terms" className="text-brand-blue underline hover:text-brand-blue/80">
-                  SMS Terms &amp; Conditions
-                </Link>
-                .
               </p>
             </div>
 

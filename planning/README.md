@@ -68,7 +68,7 @@ The `prompts/` directory contains organized prompt templates for each developmen
 
 1. **Create the project:**
    ```
-   npx create-next-app@latest alfaretailers --typescript --tailwind --app
+   npx create-next-app@latest alfa-retailers-site --typescript --tailwind --app
    ```
 
 2. **Install dependencies:**
